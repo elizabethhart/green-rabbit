@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { 
+import {
+  Alert,
   Button,
   Image, 
   SafeAreaView, 
@@ -19,8 +20,16 @@ export default function App() {
     console.log("Hello World");
   }
 
-  const handleButtonPress = () => {
-    console.log("Hello World");
+  const handleButtonPress1 = () => {
+    Alert.alert("Title", "Message", [
+      {text: "Yes", onPress: () => console.log("yes")},
+      {text: "No", onPress: () => console.log("no")}
+    ]);
+  }
+
+  const handleButtonPress2 = () => {
+    // only works in iOS
+    Alert.prompt("Title", "Message", (text: string) => console.log(text));
   }
 
   return (
@@ -43,7 +52,12 @@ export default function App() {
       <Button 
         color="orange"
         title="Click Me"
-        onPress={handleButtonPress}
+        onPress={handleButtonPress1}
+      />
+      <Button 
+        color="orange"
+        title="Click Me"
+        onPress={handleButtonPress2}
       />
       <StatusBar style="auto" />
     </SafeAreaView>
