@@ -33,7 +33,7 @@ export default function App() {
   }
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={[styles.container, styles.other]}>
       <Text numberOfLines={1} onPress={handleTextPress}>
         Hello World
       </Text>
@@ -64,11 +64,16 @@ export default function App() {
   );
 }
 
+// validates style properties
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#5aad2f',
+    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
   },
+
+  other: {
+    backgroundColor: '#5aad2f',
+  }
 });
