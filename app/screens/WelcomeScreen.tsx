@@ -8,9 +8,9 @@ interface WelcomeScreenProps {}
 const WelcomeScreen: React.FC<WelcomeScreenProps> = () => (
   <View style={styles.background}>
     <View style={styles.topBackground}>
-      <View style={styles.tallBlueBar} />
-      <View style={styles.goldBar} />
-      <View style={styles.shortRedBar} />
+      <View style={[styles.bar, styles.shortBar, styles.blueBar]} />
+      <View style={[styles.bar, styles.goldBar]} />
+      <View style={[styles.bar, styles.tallBar, styles.redBar]} />
     </View>
     <View style={styles.centerBackground}>
       <Image source={require('../assets/favicon.png')} style={styles.logo} />
@@ -19,9 +19,9 @@ const WelcomeScreen: React.FC<WelcomeScreenProps> = () => (
       <View style={styles.registerButton} />
     </View>
     <View style={styles.bottomBackground}>
-      <View style={styles.shortBlueBar} />
-      <View style={styles.goldBar} />
-      <View style={styles.tallRedBar} />
+      <View style={[styles.bar, styles.tallBar, styles.blueBar]} />
+      <View style={[styles.bar, styles.goldBar]} />
+      <View style={[styles.bar, styles.shortBar, styles.redBar]} />
     </View>
   </View>
 );
@@ -56,34 +56,30 @@ const styles = StyleSheet.create({
     alignItems: 'flex-end'
   },
 
-  tallBlueBar: {
-    backgroundColor: colors.primary,
+  bar: {
+    backgroundColor: colors.white,
     width: 100,
+    height: 100
+  },
+
+  shortBar: {
     height: 50
   },
 
-  shortBlueBar: {
-    backgroundColor: colors.primary,
-    width: 100,
+  tallBar: {
     height: 200
   },
 
-  shortRedBar: {
-    backgroundColor: colors.secondary,
-    width: 100,
-    height: 200
+  blueBar: {
+    backgroundColor: colors.primary
   },
 
-  tallRedBar: {
-    backgroundColor: colors.secondary,
-    width: 100,
-    height: 50
+  redBar: {
+    backgroundColor: colors.secondary
   },
 
   goldBar: {
-    backgroundColor: 'gold',
-    width: 100,
-    height: 100
+    backgroundColor: 'gold'
   },
 
   loginButton: {
