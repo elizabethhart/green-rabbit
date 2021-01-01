@@ -15,6 +15,7 @@ const Home: FC<HomeProps> = ({ navigation }) => {
           navigation.push('Detail', { name: 'React Native School' })
         }
       />
+      <Button title="Drawer" onPress={() => navigation.toggleDrawer()} />
     </View>
   );
 };
