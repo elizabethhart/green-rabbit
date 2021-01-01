@@ -1,16 +1,19 @@
-import React, { FC } from 'react';
-import { View, Text, Button } from 'react-native';
+import React, { FC, useContext } from 'react';
+import { Text, Button } from 'react-native';
 import { ScreenContainer } from 'react-native-screens';
+import { AuthContext } from '../context';
 
 interface CreateAccountProps {
-  navigation: any;
+  navigation: StackNavigator;
 }
 
 const CreateAccount: FC<CreateAccountProps> = ({ navigation }) => {
+  const { signUp } = useContext(AuthContext);
+
   return (
     <ScreenContainer>
       <Text>Create Account Screen</Text>
-      <Button title="Sign Up" onPress={() => alert('todo')} />
+      <Button title="Sign Up" onPress={() => signUp()} />
     </ScreenContainer>
   );
 };
