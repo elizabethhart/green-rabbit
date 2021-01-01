@@ -3,9 +3,11 @@ import { Image, StyleSheet, View } from 'react-native';
 
 import colors from '../config/colors';
 
-interface ViewImageScreenProps {}
+interface ViewImageScreenProps {
+  navigation: any;
+}
 
-const ViewImageScreen: React.FC<ViewImageScreenProps> = ({}) => (
+const ViewImageScreen: React.FC<ViewImageScreenProps> = ({ navigation }) => (
   <View style={styles.container}>
     <View style={styles.closeIcon} />
     <View style={styles.deleteIcon} />

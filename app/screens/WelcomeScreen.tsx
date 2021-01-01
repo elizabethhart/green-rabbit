@@ -1,12 +1,15 @@
 import React from 'react';
 import { Image, StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView } from 'react-navigation';
 
 import colors from '../config/colors';
 
-interface WelcomeScreenProps {}
+interface WelcomeScreenProps {
+  navigation: any;
+}
 
-const WelcomeScreen: React.FC<WelcomeScreenProps> = () => (
-  <View style={styles.background}>
+const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ navigation }) => (
+  <SafeAreaView style={styles.background} forceInset={{ top: 'always' }}>
     <View style={styles.topBackground}>
       <View style={[styles.bar, styles.shortBar, styles.blueBar]} />
       <View style={[styles.bar, styles.goldBar]} />
@@ -23,7 +26,7 @@ const WelcomeScreen: React.FC<WelcomeScreenProps> = () => (
       <View style={[styles.bar, styles.goldBar]} />
       <View style={[styles.bar, styles.shortBar, styles.redBar]} />
     </View>
-  </View>
+  </SafeAreaView>
 );
 
 const styles = StyleSheet.create({
