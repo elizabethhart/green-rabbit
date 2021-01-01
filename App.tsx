@@ -31,6 +31,7 @@ const AuthStackScreen = () => (
 
 const Tabs = createBottomTabNavigator();
 
+// TODO: Figure out types for React Navigation
 type HomeStackParamList = {
   Home: undefined;
   Detail: undefined;
@@ -123,6 +124,7 @@ export default () => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [userToken, setUserToken] = useState<null | string>(null);
 
+  // Mocked auth flow
   const authContext = useMemo(() => {
     return {
       signIn: () => {
