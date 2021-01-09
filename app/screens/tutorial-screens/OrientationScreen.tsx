@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 import { useDeviceOrientation } from '@react-native-community/hooks';
 
-import colors from '../config/colors';
+import colors from '../../config/colors';
 
 const OrientationScreen: React.FC = () => {
   const { landscape } = useDeviceOrientation();

@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import { Button, StyleSheet, Text, View } from 'react-native';
 
 interface HomeProps {
-  navigation: any;
+  navigation: any; // TODO
 }
 
 const Home: FC<HomeProps> = ({ navigation }) => {

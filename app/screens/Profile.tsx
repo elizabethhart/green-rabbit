@@ -3,7 +3,7 @@ import { Button, StyleSheet, Text, View } from 'react-native';
 import { AuthContext } from '../context';
 
 interface ProfileProps {
-  navigation: any;
+  navigation: any; // TODO
 }
 
 const Profile: FC<ProfileProps> = ({ navigation }) => {

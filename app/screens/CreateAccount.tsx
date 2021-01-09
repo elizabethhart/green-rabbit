@@ -3,11 +3,9 @@ import { Text, Button } from 'react-native';
 import { ScreenContainer } from 'react-native-screens';
 import { AuthContext } from '../context';
 
-interface CreateAccountProps {
-  navigation: StackNavigator;
-}
+interface CreateAccountProps {}
 
-const CreateAccount: FC<CreateAccountProps> = ({ navigation }) => {
+const CreateAccount: FC<CreateAccountProps> = () => {
   const { signUp } = useContext(AuthContext);
 
   return (

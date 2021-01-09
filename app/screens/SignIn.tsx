@@ -1,10 +1,10 @@
 import React, { FC, useContext } from 'react';
-import { View, Text, Button } from 'react-native';
+import { Text, Button } from 'react-native';
 import { ScreenContainer } from 'react-native-screens';
 import { AuthContext } from '../context';
 
 interface SignInProps {
-  navigation: any;
+  navigation: any; // TODO
 }
 
 const SignIn: FC<SignInProps> = ({ navigation }) => {

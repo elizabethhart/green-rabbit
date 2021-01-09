@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import { Button, StyleSheet, Text, View } from 'react-native';
 
 interface SearchProps {
-  navigation: any;
+  navigation: any; // TODO
 }
 
 const Search: FC<SearchProps> = ({ navigation }) => {
